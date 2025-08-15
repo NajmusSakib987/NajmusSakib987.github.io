@@ -14,15 +14,15 @@
 
         :root {
             /* Professional Light Color Palette with Black Accents */
-            --primary-bg: #ffffff;         /* White for main background */
-            --secondary-bg: #f8f9fa;       /* Very light gray for sections */
-            --text-primary: #111827;       /* Dark gray for primary text */
-            --text-secondary: #4b5563;     /* Medium gray for secondary text */
-            --text-light: #6b7280;         /* Lighter gray for subtle text */
-            --border-color: #d1d5db;       /* Light gray for borders */
-            --hover-bg: #f3f4f6;           /* Light hover background */
-            --accent-color: #1f2937;       /* Dark gray accent that goes with black */
-            --accent-hover: #111827;       /* Darker hover */
+            --primary-bg: #ffffff;      /* White for main background */
+            --secondary-bg: #f8f9fa;    /* Very light gray for sections */
+            --text-primary: #111827;    /* Dark gray for primary text */
+            --text-secondary: #4b5563;  /* Medium gray for secondary text */
+            --text-light: #6b7280;      /* Lighter gray for subtle text */
+            --border-color: #d1d5db;    /* Light gray for borders */
+            --hover-bg: #f3f4f6;        /* Light hover background */
+            --accent-color: #1f2937;    /* Dark gray accent that goes with black */
+            --accent-hover: #111827;    /* Darker hover */
         }
 
         body {
@@ -55,8 +55,9 @@
         .profile-pic {
             width: 180px;
             height: 180px;
+            aspect-ratio: 1 / 1; /* Ensures the container is a square */
             border-radius: 50%;
-            object-fit: cover;
+            object-fit: cover;   /* Prevents the image from stretching */
             border: 4px solid var(--accent-color);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
@@ -386,12 +387,11 @@
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <div class="header-content">
             <img src="profile.JPG" alt="Mohammad Najmus Sakib" class="profile-pic">
             <div class="header-text">
-                <h1>Mohammad Najmus Sakib</h1>
+                <h1>Mohammad Najmus Sakib (মোহাম্মদ নাজমুস সাকিব)</h1>
                 <p class="subtitle">Water Resources Engineering • Researcher</p>
                 <div class="contact-info">
                     <div class="contact-item">
@@ -407,7 +407,6 @@
         </div>
     </header>
 
-    <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <ul class="nav-links">
@@ -421,37 +420,17 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <div class="container">
-        <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
-              <p>Hello! I’m a 3rd-year BSc Water Resources Engineering student at BUET with a knack for finding shorter and simpler ways to get things done—whether in research or everyday tasks. Outside of research, I’m a very passionate football fan, proudly supporting Messi and FC Barcelona. I also love singing, playing, and listening to music of all kinds. Academically, I enjoy using machine learning and deep learning to find solutions to existing environmental problems. I’m very curious about these new ways to solve problems and genuinely enjoy the process.</p>
+              <p>Hello! I’m a 3rd year BSc Water Resources Engineering student at BUET who works well with the shorter and simpler way of doing things whether in research or in life. In addition to research, I am just a really passionate football fan, supporting Messi and FC Barcelona; I love hearing, playing, and singing all kinds of music. In terms of studies, I like to apply machine learning and deep learning to solve existing problems related environmental science.</p>
         </section>
 
-        <!-- Education Section -->
         <section id="education">
             <h2>Education</h2>
-            <div class="education-list">
-                <div class="education-item">
-                    <h4>Bachelor of Science in Water Resources Engineering</h4>
-                    <div class="education-meta">Bangladesh University of Engineering and Technology (BUET) • 2022-2027</div>
-                    <p><strong>CGPA:</strong> 3.70/4.00</p>
-                </div>
-                <div class="education-item">
-                    <h4>Higher Secondary Certificate (HSC)</h4>
-                    <div class="education-meta">Notre Dame College, Dhaka • 2021</div>
-                    <p><strong>GPA:</strong> 5.00/5.00</p>
-                </div>
-                <div class="education-item">
-                    <h4>Secondary School Certificate (SSC)</h4>
-                    <div class="education-meta">Dhaka Residential Model College • 2019</div>
-                    <p><strong>GPA:</strong> 5.00/5.00</p>
-                </div>
-            </div>
+            <p>I am currently pursuing a Bachelor of Science in Water Resources Engineering at the Bangladesh University of Engineering and Technology (BUET), following my secondary education at Dhaka Residential Model College (SSC, 2019) and higher secondary education at Notre Dame College, Dhaka (HSC, 2021).</p>
         </section>
 
-        <!-- Research Section -->
         <section id="research">
             <h2>Research & Publications</h2>
             
@@ -459,7 +438,7 @@
                 <div class="project-status">Manuscript in Preparation</div>
                 <h3>Resolving Model Conflict with Adaptive Consensus Intelligence (ACI): A GNN-Based Framework for Flood Susceptibility Mapping</h3>
                 
-                <p><strong>Abstract:</strong> Conventional flood susceptibility mapping often relies on single models or static ensembles that fail to resolve inter-model conflicts. This research introduces Adaptive Consensus Intelligence (ACI), which treats inter-model disagreement as a signal for conflict resolution. Using an ensemble of five expert models (U-Net, CatBoost, Physics-Informed Neural Network, objective MCDA, and Vision Transformer) on Jessore, Bangladesh, a Hydrological Graph Neural Network (GNN) is trained on raw data, base predictions, and disagreement signatures.</p>
+                <p>Adaptive Consensus Intelligence (ACI) is a new flood susceptibility mapping framework that aims to transform inter‑model disagreement into a useful signal for the purposes of conflict resolution. It employs five different models (U‑Net, CatBoost, a Physics‑Informed Neural Network, MCDA, and a Vision Transformer) that are integrated by a Hydrological Graph Neural Network which weights the model predictions according to geographic context and hydrological connectivity and scales weights relative to the variability among the models simultaneously and in real-time. This process generates a high‑accuracy map of susceptibility, an uncertainty map showing areas of conflict, and Model Trust Maps that can provide transparent, spatially‑explicit explainability—demonstrating a major step toward producing more accurate, transparent, and physically coherent geospatial flood risk analysis.</p>
                 
                 <p><strong>Key Innovation:</strong> The framework generates high-accuracy susceptibility maps, predictive uncertainty maps, and spatially-explainable "Model Trust Maps," advancing accurate, transparent, and physically coherent flood modeling.</p>
             </div>
@@ -468,7 +447,7 @@
                 <div class="project-status">Manuscript in Preparation</div>
                 <h3>Tidal Flood Vulnerability Assessment in Satkhira, Bangladesh: A Multi-Criteria Approach Using Analytical Hierarchy Process and Remote Sensing Data</h3>
                 
-                <p><strong>Abstract:</strong> Satkhira, a coastal region of Bangladesh, faces significant challenges from tidal flooding. This study developed a comprehensive flood-risk assessment framework using the Analytical Hierarchy Process (AHP) integrated with GIS technology. Ten critical flood-influencing factors were systematically analyzed, weighted, and combined to generate a detailed composite flood risk map.</p>
+                <p>Satkhira, located near the coast of Bangladesh, is susceptible to regular flooding due to tides. In our study, we prepared a flood risk map for Satkhira, using a modified AHP (Analytical Hierarchy Process), and GIS analysis. We focused on ten factors, including proximity to rivers, elevations below sea level, and slope aspects, to determine the varying degrees of flood hazard in the area, which was classified into five risk categories. In short, we identified high and extreme-high risk areas, which are largely confined to low-lying areas, and areas closest to a tidal line or channel. We applied verification against the 2015 flood, where our modified model was coded in R, and offered some helpful verification which indicated that our model offers improvements over other models we worked with, helping authorities to (i) empirically prioritize interventions, and (ii) design more safe infrastructure.</p>
                 
                 <p><strong>Key Results:</strong> The locally-adjusted model demonstrates superior performance compared to literature-based approaches, showing improved ROC-AUC, accuracy, precision, and F1-score metrics. The model excels particularly in classifying non-flooded areas and exhibits a clear positive correlation between risk categories and actual flood occurrence patterns.</p>
                 
@@ -481,7 +460,6 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
@@ -534,7 +512,6 @@
             </div>
         </section>
 
-        <!-- Awards & Honors Section -->
         <section id="awards">
             <h2>Awards & Honors</h2>
             <div class="awards-list">
@@ -551,7 +528,6 @@
             </div>
         </section>
 
-        <!-- Leadership & Activities Section -->
         <section id="leadership">
             <h2>Leadership & Activities</h2>
             <div class="leadership-list">
@@ -564,7 +540,6 @@
         </section>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Mohammad Najmus Sakib | Water Resources Engineering Researcher</p>
     </footer>
@@ -632,6 +607,3 @@
     </script>
 </body>
 </html>
-
-
-
