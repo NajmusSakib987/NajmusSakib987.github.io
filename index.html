@@ -13,16 +13,15 @@
         }
 
         :root {
-            /* Professional Light Color Palette with Black Accents */
-            --primary-bg: #ffffff;      /* White for main background */
-            --secondary-bg: #f8f9fa;    /* Very light gray for sections */
-            --text-primary: #111827;    /* Dark gray for primary text */
-            --text-secondary: #4b5563;  /* Medium gray for secondary text */
-            --text-light: #6b7280;      /* Lighter gray for subtle text */
-            --border-color: #d1d5db;    /* Light gray for borders */
-            --hover-bg: #f3f4f6;        /* Light hover background */
-            --accent-color: #1f2937;    /* Dark gray accent that goes with black */
-            --accent-hover: #111827;    /* Darker hover */
+            --primary-bg: #ffffff;
+            --secondary-bg: #f8f9fa;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --text-light: #6b7280;
+            --border-color: #d1d5db;
+            --hover-bg: #f3f4f6;
+            --accent-color: #1f2937;
+            --accent-hover: #111827;
         }
 
         body {
@@ -33,7 +32,6 @@
             min-height: 100vh;
         }
 
-        /* Header Styles */
         header {
             background: var(--secondary-bg);
             color: var(--text-primary);
@@ -55,9 +53,9 @@
         .profile-pic {
             width: 180px;
             height: 180px;
-            aspect-ratio: 1 / 1; /* Ensures the container is a square */
+            aspect-ratio: 1 / 1;
             border-radius: 50%;
-            object-fit: cover;   /* Prevents the image from stretching */
+            object-fit: cover;
             border: 4px solid var(--accent-color);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
@@ -104,7 +102,6 @@
             color: var(--accent-hover);
         }
 
-        /* Navigation */
         nav {
             background: var(--secondary-bg);
             padding: 0;
@@ -142,7 +139,6 @@
             border-bottom-color: var(--accent-color);
         }
 
-        /* Main Content */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -198,7 +194,6 @@
             color: var(--text-light);
         }
 
-        /* Education & Skills Lists */
         .education-list, .skills-grid, .awards-list, .leadership-list {
             display: grid;
             gap: 20px;
@@ -230,7 +225,6 @@
             margin-bottom: 10px;
         }
 
-        /* Skills Grid */
         .skills-grid {
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 15px;
@@ -265,7 +259,6 @@
             border: 1px solid var(--border-color);
         }
 
-        /* Research Projects */
         .project {
             background: var(--primary-bg);
             padding: 30px;
@@ -291,6 +284,14 @@
             margin-bottom: 15px;
         }
 
+        .project-status.revision {
+            background: #92400e;
+        }
+
+        .project-status.competition {
+            background: #374151;
+        }
+
         .project-images {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -312,7 +313,6 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
-        /* Footer */
         footer {
             background: var(--secondary-bg);
             color: var(--text-primary);
@@ -322,7 +322,6 @@
             border-top: 1px solid var(--border-color);
         }
 
-        /* Lightbox */
         .lightbox {
             position: fixed;
             top: 0;
@@ -349,7 +348,6 @@
             to { opacity: 1; }
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -419,7 +417,7 @@
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-              <p>Hello! I’m a 3rd year BSc Water Resources Engineering student at BUET who works well with the shorter and simpler way of doing things whether in research or in life. In addition to research, I am just a really passionate football fan, supporting Messi and FC Barcelona; I love hearing, playing, and singing all kinds of music. In terms of studies, I like to apply machine learning and deep learning to solve existing problems related environmental science.</p>
+            <p>Hello! I'm a 3rd year BSc Water Resources Engineering student at BUET who works well with the shorter and simpler way of doing things whether in research or in life. In addition to research, I am just a really passionate football fan, supporting Messi and FC Barcelona; I love hearing, playing, and singing all kinds of music. In terms of studies, I like to apply machine learning and deep learning to solve existing problems related environmental science.</p>
         </section>
 
         <section id="education">
@@ -433,26 +431,26 @@
             <div class="project">
                 <div class="project-status">Manuscript in Preparation</div>
                 <h3>Resolving Model Conflict with Adaptive Consensus Intelligence (ACI): A GNN-Based Framework for Flood Susceptibility Mapping</h3>
-                
                 <p>Adaptive Consensus Intelligence (ACI) is a new flood susceptibility mapping framework that aims to transform inter‑model disagreement into a useful signal for the purposes of conflict resolution. It employs five different models (U‑Net, CatBoost, a Physics‑Informed Neural Network, MCDA, and a Vision Transformer) that are integrated by a Hydrological Graph Neural Network which weights the model predictions according to geographic context and hydrological connectivity and scales weights relative to the variability among the models simultaneously and in real-time. This process generates a high‑accuracy map of susceptibility, an uncertainty map showing areas of conflict, and Model Trust Maps that can provide transparent, spatially‑explicit explainability—demonstrating a major step toward producing more accurate, transparent, and physically coherent geospatial flood risk analysis.</p>
-                
                 <p><strong>Key Innovation:</strong> The framework generates high-accuracy susceptibility maps, predictive uncertainty maps, and spatially-explainable "Model Trust Maps," advancing accurate, transparent, and physically coherent flood modeling.</p>
             </div>
 
             <div class="project">
-                <div class="project-status">Manuscript in Preparation</div>
+                <div class="project-status revision">Revision Submitted</div>
                 <h3>Tidal Flood Vulnerability Assessment in Satkhira, Bangladesh: A Multi-Criteria Approach Using Analytical Hierarchy Process and Remote Sensing Data</h3>
-                
                 <p>Satkhira, located near the coast of Bangladesh, is susceptible to regular flooding due to tides. In our study, we prepared a flood risk map for Satkhira, using a modified AHP (Analytical Hierarchy Process), and GIS analysis. We focused on ten factors, including proximity to rivers, elevations below sea level, and slope aspects, to determine the varying degrees of flood hazard in the area, which was classified into five risk categories. In short, we identified high and extreme-high risk areas, which are largely confined to low-lying areas, and areas closest to a tidal line or channel. We applied verification against the 2015 flood, where our modified model was coded in R, and offered some helpful verification which indicated that our model offers improvements over other models we worked with, helping authorities to (i) empirically prioritize interventions, and (ii) design more safe infrastructure.</p>
-                
                 <p><strong>Key Results:</strong> The locally-adjusted model demonstrates superior performance compared to literature-based approaches, showing improved ROC-AUC, accuracy, precision, and F1-score metrics. The model excels particularly in classifying non-flooded areas and exhibits a clear positive correlation between risk categories and actual flood occurrence patterns.</p>
-                
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0;"><em>Revision submitted to <strong>Discover Geoscience</strong></em></p>
                 <div class="project-images">
                     <img src="satkhira_flood_map.jpg" alt="Comprehensive Flood Risk Map for Satkhira Region" class="clickable-img">
-
                     <img src="satkhira_validation_plot.png" alt="Model Validation and Performance Metrics" class="clickable-img">
-
                 </div>
+            </div>
+
+            <div class="project">
+                <div class="project-status competition">Poster Competition</div>
+                <h3>Spatial Assessment of Irrigation-Induced Water Stress in Northwest Bangladesh</h3>
+                <p>Collaborated with Maesha Mashiyat to map over-irrigation zones across Northwest Bangladesh using unsupervised clustering techniques and GIS-based spatial analysis. The study identifies areas of excessive groundwater extraction for irrigation, offering a spatially explicit picture of water stress that can inform sustainable agricultural water management in the region.</p>
             </div>
         </section>
 
@@ -541,7 +539,6 @@
     </footer>
 
     <script>
-        // Lightbox functionality
         const images = document.querySelectorAll('.clickable-img');
 
         images.forEach(img => {
@@ -566,7 +563,6 @@
                     }
                 });
 
-                // Close on Escape key
                 const handleEscape = (e) => {
                     if (e.key === 'Escape') {
                         lightbox.style.opacity = '0';
@@ -584,7 +580,6 @@
             });
         });
 
-        // Smooth scrolling for navigation
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -603,4 +598,3 @@
     </script>
 </body>
 </html>
-
