@@ -338,6 +338,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#awards">Awards</a></li>
                 <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#" data-modal="modal-listening">Currently Listening</a></li>
             </ul>
         </div>
     </nav>
@@ -346,8 +347,6 @@
         <section id="about">
             <h2>About Me</h2>
             <p>Hi there! Final-year WRE student here. I love doing fun stuff involving music, TV series, and, as an extension of that, fun research. I love working with climate and hydrology, and it’s even more fun when I can somehow analyze the physics behind them. I also love doing fun stuff in real life.</p>
-            <p>Currently listening:</p>
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E4qrJkevzHBMH?utm_source=generator&theme=0&si=897ed7aa826a486e" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </section>
 
         <section id="education">
@@ -449,6 +448,14 @@
             </div>
         </div>
 
+        <div class="modal-overlay" id="modal-listening">
+            <div class="modal-box">
+                <button class="modal-close" data-close>Close</button>
+                <h3>Currently Listening</h3>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E4qrJkevzHBMH?utm_source=generator&theme=0&si=897ed7aa826a486e" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+
         <section id="skills">
             <h2>Technical Skills</h2>
             <p>I am familiar with <strong>spatial data analysis</strong> using both <strong>GIS software</strong> and <strong>GeoPandas</strong>, and I am particularly interested in applying <strong>state-of-the-art methods</strong> alongside my <strong>domain knowledge</strong>. I also have experience with <strong>hydraulic and hydrologic modeling</strong> using tools such as <strong>HEC-RAS</strong>, <strong>HEC-HMS</strong>, and <strong>EPA-SWMM</strong>.</p>
@@ -490,6 +497,15 @@
         document.querySelectorAll('.project-title').forEach(function(title) {
             title.addEventListener('click', function() {
                 var id = title.getAttribute('data-modal');
+                var modal = document.getElementById(id);
+                if (modal) modal.classList.add('open');
+            });
+        });
+
+        document.querySelectorAll('.nav-links a[data-modal]').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var id = link.getAttribute('data-modal');
                 var modal = document.getElementById(id);
                 if (modal) modal.classList.add('open');
             });
