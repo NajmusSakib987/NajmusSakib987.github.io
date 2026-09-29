@@ -3,544 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Najmus Sakib | Water Resources Engineering</title>
+    <title>Mohammad Najmus Sakib</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            line-height: 1.5;
+            font-family: "Times New Roman", Times, serif;
+            margin: 30px;
             color: #000;
             background: #fff;
-            font-size: 16px;
         }
-
-        a {
-            color: #0000EE;
-            text-decoration: underline;
-        }
-
-        a:visited {
-            color: #551A8B;
-        }
-
-        header {
-            background: #fff;
-            color: #000;
-            padding: 30px 20px 20px 20px;
-            border-bottom: 2px solid #000;
-        }
-
-        .header-content {
-            max-width: 750px;
-            margin: 0 auto;
-        }
-
-        .profile-pic {
-            width: 120px;
-            height: 140px;
-            object-fit: cover;
-            border: 1px solid #000;
-            float: right;
-            margin: 0 0 10px 20px;
-        }
-
-        .header-text h1 {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #000;
-        }
-
-        .header-text .subtitle {
-            font-size: 1rem;
-            color: #000;
-            margin-bottom: 10px;
-            font-style: italic;
-        }
-
-        .contact-info {
-            font-size: 0.95rem;
-        }
-
-        .contact-item {
-            margin-bottom: 2px;
-        }
-
-        nav {
-            background: #fff;
-            padding: 10px 20px;
-            border-bottom: 1px solid #000;
-        }
-
-        .nav-container {
-            max-width: 750px;
-            margin: 0 auto;
-        }
-
-        .nav-links {
-            list-style: none;
-        }
-
-        .nav-links li {
-            display: inline;
-        }
-
-        .nav-links li::after {
-            content: " | ";
-        }
-
-        .nav-links li:last-child::after {
-            content: "";
-        }
-
-        .nav-links a {
-            color: #0000EE;
-            text-decoration: underline;
-            font-weight: normal;
-            font-size: 0.95rem;
-        }
-
-        .container {
-            max-width: 750px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 30px;
-            padding: 0;
-        }
-
-        h2 {
-            color: #000;
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 12px;
-            padding-bottom: 4px;
-            border-bottom: 1px solid #000;
-        }
-
-        h3 {
-            color: #000;
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 8px;
-            margin-top: 15px;
-        }
-
-        h4 {
-            font-size: 1rem;
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-
-        p {
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 10px;
-            color: #000;
-        }
-
-        .education-list, .skills-grid, .awards-list, .leadership-list {
-            margin-top: 10px;
-        }
-
-        .education-item, .award-item, .leadership-item, .project, .skill-category {
-            background: #fff;
-            padding: 10px 0;
-            margin-bottom: 15px;
-            border: none;
-            border-bottom: 1px dotted #999;
-        }
-
-        .education-meta, .award-meta, .leadership-meta {
-            color: #333;
-            font-size: 0.9rem;
-            margin-bottom: 6px;
-            font-style: italic;
-        }
-
-        .skills-grid {
-            display: block;
-        }
-
-        .skill-category {
-            margin-bottom: 10px;
-        }
-
-        .skill-tags {
-            display: inline;
-        }
-
-        .skill-tag {
-            background: none;
-            color: #000;
-            padding: 0;
-            font-size: 1rem;
-            font-weight: normal;
-            border: none;
-        }
-
-        .skill-tag::after {
-            content: ", ";
-        }
-
-        .skill-tag:last-child::after {
-            content: "";
-        }
-
-        .project-status {
-            display: inline;
-            background: none;
-            color: #000;
-            padding: 0;
-            font-size: 0.9rem;
-            font-weight: normal;
-            font-style: italic;
-            margin-bottom: 5px;
-        }
-
-        .project-images {
-            display: block;
-            margin-top: 10px;
-        }
-
-        .project-images img {
-            width: 100%;
-            max-width: 600px;
-            border: 1px solid #000;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .project-title {
-            cursor: pointer;
-            text-decoration: underline;
-        }
-
-        .thumb-link {
-            cursor: zoom-in;
-        }
-
-        .thumb-link img {
-            cursor: zoom-in;
-        }
-
-        .project-title:hover {
-            color: #0000EE;
-        }
-
-        .title-hint {
-            font-size: 0.8rem;
-            font-weight: normal;
-            font-style: italic;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .modal-overlay.open {
-            display: flex;
-        }
-
-        .modal-box {
-            background: #fff;
-            border: 1px solid #000;
-            max-width: 600px;
-            width: 100%;
-            padding: 20px;
-            max-height: 80vh;
-            overflow: auto;
-        }
-
-        .modal-close {
-            float: right;
-            background: #fff;
-            border: 1px solid #000;
-            padding: 2px 8px;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: 0.9rem;
-        }
-
-        footer {
-            background: #fff;
-            color: #333;
-            text-align: left;
-            padding: 20px;
-            margin-top: 30px;
-            border-top: 2px solid #000;
-            font-size: 0.85rem;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        footer p {
-            color: #333;
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 768px) {
-            .profile-pic {
-                float: none;
-                display: block;
-                margin: 0 0 15px 0;
-            }
-        }
+        a { color: blue; }
+        h1 { font-size: 26px; margin-bottom: 5px; }
+        h2 { font-size: 20px; border-bottom: 1px solid #000; margin-top: 30px; }
+        h3 { font-size: 17px; }
+        img { max-width: 100%; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="profile.JPG" alt="Mohammad Najmus Sakib" class="profile-pic" width="333" height="500" decoding="async">
-            <div class="header-text">
-                <h1>Mohammad Najmus Sakib (মোহাম্মদ নাজমুস সাকিব)</h1>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        Email: <a href="mailto:nazmussakib9589@gmail.com">nazmussakib9589@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        LinkedIn: <a href="https://www.linkedin.com/in/mnajmussakib/">linkedin.com/in/mnajmussakib</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <nav>
-        <div class="nav-container">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#" data-modal="modal-skills">Skills</a></li>
-                <li><a href="#" data-modal="modal-awards">Awards</a></li>
-                <li><a href="#" data-modal="modal-leadership">Leadership</a></li>
-                <li><a href="#" data-modal="modal-listening">Currently Listening</a></li>
-            </ul>
-        </div>
-    </nav>
+<h1>Mohammad Najmus Sakib (মোহাম্মদ নাজমুস সাকিব)</h1>
+<img src="profile.JPG" alt="Mohammad Najmus Sakib" width="200" loading="lazy" decoding="async">
+<p>Email: <a href="mailto:nazmussakib9589@gmail.com">nazmussakib9589@gmail.com</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/mnajmussakib/">linkedin.com/in/mnajmussakib</a></p>
 
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi there! Final-year WRE student here. I love doing fun stuff involving music, TV series, and, as an extension of that, fun research. I love working with climate and hydrology, and it’s even more fun when I can somehow analyze the physics behind them. I also love doing fun stuff in real life.</p>
-        </section>
+<p>
+<a href="#about">About</a> |
+<a href="#education">Education</a> |
+<a href="#research">Research</a> |
+<a href="#skills">Skills</a> |
+<a href="#awards">Awards</a> |
+<a href="#leadership">Leadership</a>
+</p>
 
-        <section id="education">
-            <h2>Education</h2>
-            <p>I am currently pursuing a Bachelor of Science in Water Resources Engineering at the Bangladesh University of Engineering and Technology (BUET), following my secondary education at Dhaka Residential Model College (SSC, 2019) and higher secondary education at Notre Dame College, Dhaka (HSC, 2021).</p>
-        </section>
+<hr>
 
-        <section id="research">
-            <h2>Research & Publications</h2>
+<h2 id="about">About Me</h2>
+<p>Hi there! Final-year WRE student here. I love doing fun stuff involving music, TV series, and, as an extension of that, fun research. I love working with climate and hydrology, and it’s even more fun when I can somehow analyze the physics behind them. I also love doing fun stuff in real life.</p>
 
-            <div class="project">
-                <div class="project-status">[Ongoing Research]</div>
-                <h3 class="project-title" data-modal="modal-groundwater">Model-inferred effective lags reveal non-stationary meteorological-to-groundwater drought propagation across contrasting settings in Bangladesh and its future projections <span class="title-hint">(click for details)</span></h3>
-            </div>
+<p>Some music i like :</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E4qrJkevzHBMH?utm_source=generator&theme=0&si=897ed7aa826a486e" width="300" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-            <div class="project">
-                <div class="project-status">[Manuscript in Preparation]</div>
-                <h3 class="project-title" data-modal="modal-enso">Seasonal ENSO Signals, Annual Flood Peaks, and Changing Stage–Discharge Relations in the Ganges and Brahmaputra Rivers of Bangladesh <span class="title-hint">(click for details)</span></h3>
-                <p>Mohammad Najmus Sakib, <a href="https://scholar.google.com/citations?user=_r-UN8YAAAAJ&hl=en">Rounak Afroz</a></p>
-                <div class="project-images">
-                    <a href="Graphical Abstract ENSO.jpg" class="thumb-link"><img src="Graphical Abstract ENSO.jpg" alt="Graphical Abstract - ENSO, Flood Peaks and Stage-Discharge Relations" style="max-width:300px;" loading="lazy" decoding="async"></a>
-                </div>
-                <p>Study area: <a href="study_area_stations_catchments.kmz">Download KMZ (stations and catchments, opens in Google Earth)</a></p>
-            </div>
+<h2 id="education">Education</h2>
+<p>I am currently pursuing a Bachelor of Science in Water Resources Engineering at the Bangladesh University of Engineering and Technology (BUET), following my secondary education at Dhaka Residential Model College (SSC, 2019) and higher secondary education at Notre Dame College, Dhaka (HSC, 2021).</p>
 
-            <div class="project">
-                <div class="project-status">[Undergrad Thesis - Ongoing]</div>
-                <h3 class="project-title" data-modal="modal-thesis">Multi-Century Monthly Streamflow Reconstruction and Drought-Flood Abrupt Alternation Event Analysis of the Brahmaputra River <span class="title-hint">(click for details)</span></h3>
-                <p>Under supervision of <a href="https://scholar.google.com/citations?user=_r-UN8YAAAAJ&hl=en">Dr. Rounak Afroz</a></p>
-            </div>
+<h2 id="research">Research & Publications</h2>
 
-            <div class="project">
-                <div class="project-status">[Revision Submitted]</div>
-                <h3 class="project-title" data-modal="modal-satkhira">FLOOD SUSCEPTIBILITY ASSESSMENT IN THE SATKHIRA DISTRICT OF BANGLADESH THROUGH MULTI-CRITERION ANALYSIS WITH AHP AND REMOTE SENSING <span class="title-hint">(click for details)</span></h3>
-                <div class="project-images" style="display:flex; gap:10px; align-items:flex-start;">
-                    <a href="Satkhira flood_risk_methodology_bw.png" class="thumb-link"><img src="Satkhira flood_risk_methodology_bw.png" alt="Satkhira flood risk methodology" style="max-width:200px;" loading="lazy" decoding="async"></a>
-                    <a href="Satkhira 2.png" class="thumb-link"><img src="Satkhira 2.png" alt="Satkhira flood map" style="max-width:250px;" loading="lazy" decoding="async"></a>
-                    <a href="validation_figure_2015_outline_Satkhira.jpg" class="thumb-link"><img src="validation_figure_2015_outline_Satkhira.jpg" alt="Satkhira 2015 validation" style="max-width:250px;" loading="lazy" decoding="async"></a>
-                </div>
-            </div>
+<p><b>[Ongoing Research]</b></p>
+<h3>Model-inferred effective lags reveal non-stationary meteorological-to-groundwater drought propagation across contrasting settings in Bangladesh and its future projections</h3>
+<p>Mohammad Najmus Sakib, <a href="https://www.linkedin.com/in/maesha-mashiyat-679008435/">Maesha Mashiyat</a></p>
+<p><b>Key points:</b> Studies rainfall-to-groundwater drought in three contrasting zones: Barind (dry, clay, heavily pumped), Sylhet (wet basin), and CHT (hilly). Simple matching gives 0–5 months lag but from only 5–11 events. Model-inferred effective lag (265 points per zone) finds sharp shifts: Barind April 2011, CHT April 2013, Sylhet September 2014. Barind shows longer memory, consistent with slow recharge. Future projections are drier after correction, with about one-third of late-century conditions outside past experience.</p>
 
-            <div class="project">
-                <div class="project-status">[Poster Competition]</div>
-                <h3 class="project-title" data-modal="modal-poster">Spatial Assessment of Irrigation-Induced Water Stress in Northwest Bangladesh <span class="title-hint">(click for details)</span></h3>
-                <p>Mohammad Najmus Sakib, <a href="https://www.linkedin.com/in/maesha-mashiyat-679008435/">Maesha Mashiyat</a></p>
-            </div>
-        </section>
+<br>
 
-        <div class="modal-overlay" id="modal-groundwater">
-            <div class="modal-box">
-                <button class="modal-close" data-close>Close</button>
-                <h3>Model-inferred effective lags reveal non-stationary meteorological-to-groundwater drought propagation across contrasting settings in Bangladesh and its future projections</h3>
-                <p>Mohammad Najmus Sakib, <a href="https://www.linkedin.com/in/maesha-mashiyat-679008435/">Maesha Mashiyat</a></p>
-                <p><strong>Key points:</strong> Studies rainfall-to-groundwater drought in three contrasting zones: Barind (dry, clay, heavily pumped), Sylhet (wet basin), and CHT (hilly). Simple matching gives 0–5 months lag but from only 5–11 events. Model-inferred effective lag (265 points per zone) finds sharp shifts: Barind April 2011, CHT April 2013, Sylhet September 2014. Barind shows longer memory, consistent with slow recharge. Future projections are drier after correction, with about one-third of late-century conditions outside past experience.</p>
-            </div>
-        </div>
+<p><b>[Manuscript in Preparation]</b></p>
+<h3>Seasonal ENSO Signals, Annual Flood Peaks, and Changing Stage–Discharge Relations in the Ganges and Brahmaputra Rivers of Bangladesh</h3>
+<p>Mohammad Najmus Sakib, <a href="https://scholar.google.com/citations?user=_r-UN8YAAAAJ&hl=en">Rounak Afroz</a></p>
+<p><b>Key points:</b> Studies the Ganges at Hardinge Bridge and the Brahmaputra at Bahadurabad. The known seasonal link between ENSO and Ganges flow still holds when extended to 2022. However, the same ENSO signal does not predict the largest flood of the year. Gauges themselves changed over time: Hardinge Bridge shifts around 2006 with falling water level at same flow, Bahadurabad rises then falls around 2012, while rainfall shows no such change. A strong seasonal link does not mean a strong yearly-peak link.</p>
+<p><img src="Graphical Abstract ENSO.jpg" alt="Graphical Abstract - ENSO" width="400" loading="lazy" decoding="async"></p>
+<p>Study area: <a href="study_area_stations_catchments.kmz">Download KMZ (stations and catchments, opens in Google Earth)</a></p>
 
-        <div class="modal-overlay" id="modal-enso">
-            <div class="modal-box">
-                <button class="modal-close" data-close>Close</button>
-                <h3>Seasonal ENSO Signals, Annual Flood Peaks, and Changing Stage–Discharge Relations in the Ganges and Brahmaputra Rivers of Bangladesh</h3>
-                <p><strong>Key points:</strong> Studies the Ganges at Hardinge Bridge and the Brahmaputra at Bahadurabad. The known seasonal link between ENSO and Ganges flow still holds when extended to 2022. However, the same ENSO signal does not predict the largest flood of the year. Gauges themselves changed over time: Hardinge Bridge shifts around 2006 with falling water level at same flow, Bahadurabad rises then falls around 2012, while rainfall shows no such change. A strong seasonal link does not mean a strong yearly-peak link.</p>
-            </div>
-        </div>
+<br>
 
-        <div class="modal-overlay" id="modal-thesis">
-            <div class="modal-box">
-                <button class="modal-close" data-close>Close</button>
-                <h3>Multi-Century Monthly Streamflow Reconstruction and Drought-Flood Abrupt Alternation Event Analysis of the Brahmaputra River</h3>
-                <p>The Brahmaputra is one of the largest rivers in South Asia, and its floods regularly affect millions of people in the delta region of Bangladesh. The instrumental record at Bahadurabad is too short to capture long-term change in the river. This project reconstructs centuries of monthly discharge at Bahadurabad using tree rings. Tree-ring width reflects the moisture a tree received each year, among other factors. Using this, tree-ring width is matched against the known flow of the river. This builds a weighted statistical model. The model then estimates past discharge, extending the record beyond what is currently available. This reconstruction will then be used to analyze historical droughts, wet periods, and abrupt drought-flood transitions. The result gives planners and researchers a longer baseline for assessing hydrological extremes and flood risk in downstream Bangladesh.</p>
-            </div>
-        </div>
+<p><b>[Undergrad Thesis - Ongoing]</b></p>
+<h3>Multi-Century Monthly Streamflow Reconstruction and Drought-Flood Abrupt Alternation Event Analysis of the Brahmaputra River</h3>
+<p>Under supervision of <a href="https://scholar.google.com/citations?user=_r-UN8YAAAAJ&hl=en">Dr. Rounak Afroz</a></p>
+<p>The Brahmaputra is one of the largest rivers in South Asia, and its floods regularly affect millions of people in the delta region of Bangladesh. The instrumental record at Bahadurabad is too short to capture long-term change in the river. This project reconstructs centuries of monthly discharge at Bahadurabad using tree rings. Tree-ring width reflects the moisture a tree received each year, among other factors. Using this, tree-ring width is matched against the known flow of the river. This builds a weighted statistical model. The model then estimates past discharge, extending the record beyond what is currently available. This reconstruction will then be used to analyze historical droughts, wet periods, and abrupt drought-flood transitions. The result gives planners and researchers a longer baseline for assessing hydrological extremes and flood risk in downstream Bangladesh.</p>
 
-        <div class="modal-overlay" id="modal-satkhira">
-            <div class="modal-box">
-                <button class="modal-close" data-close>Close</button>
-                <h3>FLOOD SUSCEPTIBILITY ASSESSMENT IN THE SATKHIRA DISTRICT OF BANGLADESH THROUGH MULTI-CRITERION ANALYSIS WITH AHP AND REMOTE SENSING</h3>
-                <p>This study maps flood risk in Satkhira District using GIS with the Analytical Hierarchy Process (AHP). Ten factors were used: elevation, slope, drainage density, distance from rivers, distance from roads, rainfall, land use/land cover, soil type, NDVI, and TWI.</p>
-                <p><strong>Key points:</strong> Most of the district is at moderate (57.1%) or high (35.1%) risk, with 0.5% extreme, 7.3% low, and less than 0.1% very low. In total, 92.7% falls in the moderate-to-extreme range. Validation against the 2015 flood gives AUC 0.806, better than the literature-based weighting (AUC 0.782). The model finds almost all flooded areas (recall 99.47%) but is deliberately cautious, with lower precision (32.40%) and accuracy (36.98%), which suits precautionary planning. Results point to needs for embankment management, controlled land use, and flood-resilient infrastructure.</p>
-                <p><em>Revision submitted to <strong>Discover Geoscience</strong></em></p>
-            </div>
-        </div>
+<br>
 
-        <div class="modal-overlay" id="modal-poster">
-            <div class="modal-box">
-                <button class="modal-close" data-close>Close</button>
-                <h3>Spatial Assessment of Irrigation-Induced Water Stress in Northwest Bangladesh</h3>
-                <p>Collaborated with <a href="https://www.linkedin.com/in/maesha-mashiyat-679008435/">Maesha Mashiyat</a> to map over-irrigation zones across Northwest Bangladesh using unsupervised clustering techniques and GIS-based spatial analysis. The study identifies areas of excessive groundwater extraction for irrigation, offering a spatially explicit picture of water stress that can inform sustainable agricultural water management in the region.</p>
-            </div>
-        </div>
+<p><b>[Revision Submitted]</b></p>
+<h3>FLOOD SUSCEPTIBILITY ASSESSMENT IN THE SATKHIRA DISTRICT OF BANGLADESH THROUGH MULTI-CRITERION ANALYSIS WITH AHP AND REMOTE SENSING</h3>
+<p>This study maps flood risk in Satkhira District using GIS with the Analytical Hierarchy Process (AHP). Ten factors were used: elevation, slope, drainage density, distance from rivers, distance from roads, rainfall, land use/land cover, soil type, NDVI, and TWI.</p>
+<p><b>Key points:</b> Most of the district is at moderate (57.1%) or high (35.1%) risk, with 0.5% extreme, 7.3% low, and less than 0.1% very low. In total, 92.7% falls in the moderate-to-extreme range. Validation against the 2015 flood gives AUC 0.806, better than the literature-based weighting (AUC 0.782). The model finds almost all flooded areas (recall 99.47%) but is deliberately cautious, with lower precision (32.40%) and accuracy (36.98%), which suits precautionary planning. Results point to needs for embankment management, controlled land use, and flood-resilient infrastructure.</p>
+<p><i>Revision submitted to <b>Discover Geoscience</b></i></p>
+<p>
+<img src="Satkhira flood_risk_methodology_bw.png" alt="methodology" width="250" loading="lazy" decoding="async">
+<br>
+<img src="Satkhira 2.png" alt="flood map" width="350" loading="lazy" decoding="async">
+<br>
+<img src="validation_figure_2015_outline_Satkhira.jpg" alt="validation" width="350" loading="lazy" decoding="async">
+</p>
 
-        <div class="modal-overlay" id="modal-image-view">
-            <div class="modal-box" style="max-width:90%; text-align:center;">
-                <button class="modal-close" data-close>Close</button>
-                <div style="clear:both;"></div>
-                <img id="modal-image" src="" alt="Full view" style="max-width:100%; max-height:75vh; border:1px solid #000;">
-            </div>
-        </div>
+<br>
 
-        <div class="modal-overlay" id="modal-listening">
-            <div class="modal-box">
-                <button class="modal-close" data-close>Close</button>
-                <h3>Currently Listening</h3>
-                <iframe id="spotify-frame" data-testid="embed-iframe" style="border-radius:12px" data-src="https://open.spotify.com/embed/playlist/37i9dQZF1E4qrJkevzHBMH?utm_source=generator&theme=0&si=897ed7aa826a486e" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-        </div>
+<p><b>[Poster Competition]</b></p>
+<h3>Spatial Assessment of Irrigation-Induced Water Stress in Northwest Bangladesh</h3>
+<p>Mohammad Najmus Sakib, <a href="https://www.linkedin.com/in/maesha-mashiyat-679008435/">Maesha Mashiyat</a></p>
+<p>Collaborated with <a href="https://www.linkedin.com/in/maesha-mashiyat-679008435/">Maesha Mashiyat</a> to map over-irrigation zones across Northwest Bangladesh using unsupervised clustering techniques and GIS-based spatial analysis. The study identifies areas of excessive groundwater extraction for irrigation, offering a spatially explicit picture of water stress that can inform sustainable agricultural water management in the region.</p>
 
-        <div class="modal-overlay" id="modal-skills">
-            <div class="modal-box">
-                <button class="modal-close" data-close>Close</button>
-                <h3>Technical Skills</h3>
-                <p>I am familiar with <strong>spatial data analysis</strong> using both <strong>GIS software</strong> and <strong>GeoPandas</strong>, and I am particularly interested in applying <strong>state-of-the-art methods</strong> alongside my <strong>domain knowledge</strong>. I also have experience with <strong>hydraulic and hydrologic modeling</strong> using tools such as <strong>HEC-RAS</strong>, <strong>HEC-HMS</strong>, and <strong>EPA-SWMM</strong>.</p>
-            </div>
-        </div>
+<h2 id="skills">Technical Skills</h2>
+<p>I am familiar with <b>spatial data analysis</b> using both <b>GIS software</b> and <b>GeoPandas</b>, and I am particularly interested in applying <b>state-of-the-art methods</b> alongside my <b>domain knowledge</b>. I also have experience with <b>hydraulic and hydrologic modeling</b> using tools such as <b>HEC-RAS</b>, <b>HEC-HMS</b>, and <b>EPA-SWMM</b>.</p>
 
-        <div class="modal-overlay" id="modal-awards">
-            <div class="modal-box">
-                <button class="modal-close" data-close>Close</button>
-                <h3>Awards & Honors</h3>
-                <h4>University Merit Scholarship</h4>
-                <p>Bangladesh University of Engineering and Technology</p>
-                <p>Awarded to the top three students in the Department of Water Resources Engineering each semester. Successfully received this prestigious recognition twice in consecutive semesters (Level 1 Term 2 and Level 2 Term 1), demonstrating consistent academic excellence.</p>
-                <h4 style="margin-top:15px;">Dean's List Recognition</h4>
-                <p>BUET Faculty of Civil Engineering</p>
-                <p>Honored for achieving a GPA of 3.75 or higher in two consecutive regular academic terms, recognizing sustained high-level academic performance.</p>
-            </div>
-        </div>
+<h2 id="awards">Awards & Honors</h2>
+<p><b>University Merit Scholarship</b><br>Bangladesh University of Engineering and Technology<br>Awarded to the top three students in the Department of Water Resources Engineering each semester. Successfully received this prestigious recognition twice in consecutive semesters (Level 1 Term 2 and Level 2 Term 1), demonstrating consistent academic excellence.</p>
+<p><b>Dean's List Recognition</b><br>BUET Faculty of Civil Engineering<br>Honored for achieving a GPA of 3.75 or higher in two consecutive regular academic terms, recognizing sustained high-level academic performance.</p>
 
-        <div class="modal-overlay" id="modal-leadership">
-            <div class="modal-box">
-                <button class="modal-close" data-close>Close</button>
-                <h3>Leadership & Activities</h3>
-                <h4>Assistant General Secretary</h4>
-                <p>Notre Dame English Language Club</p>
-                <p>Served as <i>Assistant General Secretary</i> of the Notre Dame English Language Club, Department of ICT and Graphics, helping organize and coordinate events.</p>
-            </div>
-        </div>
-    </div>
+<h2 id="leadership">Leadership & Activities</h2>
+<p><b>Assistant General Secretary</b><br>Notre Dame English Language Club<br>Served as <i>Assistant General Secretary</i> of the Notre Dame English Language Club, Department of ICT and Graphics, helping organize and coordinate events.</p>
 
-    <footer>
-        <p>&copy; 2025 Mohammad Najmus Sakib</p>
-    </footer>
+<hr>
+<p>&copy; 2025 Mohammad Najmus Sakib</p>
 
-    <script>
-        document.querySelectorAll('.project-title').forEach(function(title) {
-            title.addEventListener('click', function() {
-                var id = title.getAttribute('data-modal');
-                var modal = document.getElementById(id);
-                if (modal) modal.classList.add('open');
-            });
-        });
-
-        document.querySelectorAll('.nav-links a[data-modal]').forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                var id = link.getAttribute('data-modal');
-                var modal = document.getElementById(id);
-                if (modal) {
-                    modal.classList.add('open');
-                    if (id === 'modal-listening') {
-                        var frame = document.getElementById('spotify-frame');
-                        if (frame && !frame.src) frame.src = frame.getAttribute('data-src');
-                    }
-                }
-            });
-        });
-
-        document.querySelectorAll('.thumb-link').forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                var src = link.getAttribute('href');
-                var img = document.getElementById('modal-image');
-                var viewer = document.getElementById('modal-image-view');
-                if (img && viewer) {
-                    img.src = src;
-                    viewer.classList.add('open');
-                }
-            });
-        });
-
-        document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
-            overlay.addEventListener('click', function(e) {
-                if (e.target === overlay || e.target.hasAttribute('data-close')) {
-                    overlay.classList.remove('open');
-                }
-            });
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                document.querySelectorAll('.modal-overlay.open').forEach(function(m) {
-                    m.classList.remove('open');
-                });
-            }
-        });
-    </script>
 </body>
 </html>
