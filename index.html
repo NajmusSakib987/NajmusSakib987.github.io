@@ -13,9 +13,13 @@
         }
         a { color: blue; }
         h1 { font-size: 26px; margin-bottom: 5px; }
-        h2 { font-size: 20px; border-bottom: 1px solid #000; margin-top: 30px; }
+        h2 { font-size: 20px; margin-top: 30px; }
         h3 { font-size: 17px; }
         img { max-width: 100%; }
+        .thumb { width: 160px; height: 120px; object-fit: cover; border: 1px solid #999; border-radius: 4px; cursor: zoom-in; vertical-align: top; }
+        .thumb:hover { border-color: #000; }
+        .figure-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start; margin: 8px 0; }
+        .figure-hint { font-size: 13px; color: #555; margin: 4px 0; }
     </style>
 </head>
 <body>
@@ -58,7 +62,8 @@
 <h3>Seasonal ENSO Signals, Annual Flood Peaks, and Changing Stage–Discharge Relations in the Ganges and Brahmaputra Rivers of Bangladesh</h3>
 <p>Mohammad Najmus Sakib, <a href="https://scholar.google.com/citations?user=_r-UN8YAAAAJ&hl=en">Rounak Afroz</a></p>
 <p><b>Key points:</b> Studies the Ganges at Hardinge Bridge and the Brahmaputra at Bahadurabad. The known seasonal link between ENSO and Ganges flow still holds when extended to 2022. However, the same ENSO signal does not predict the largest flood of the year. Gauges themselves changed over time: Hardinge Bridge shifts around 2006 with falling water level at same flow, Bahadurabad rises then falls around 2012, while rainfall shows no such change. A strong seasonal link does not mean a strong yearly-peak link.</p>
-<p><img src="Graphical Abstract ENSO.jpg" alt="Graphical Abstract - ENSO" width="400" loading="lazy" decoding="async"></p>
+<p class="figure-hint">Click thumbnail to view full size:</p>
+<p class="figure-row"><a href="Graphical Abstract ENSO.jpg" target="_blank"><img class="thumb" src="Graphical Abstract ENSO.jpg" alt="Graphical Abstract - ENSO" loading="lazy" decoding="async"></a></p>
 <p>Study area: <a href="study_area_stations_catchments.kmz">Download KMZ (stations and catchments, opens in Google Earth)</a></p>
 
 <br>
@@ -75,12 +80,11 @@
 <p>This study maps flood risk in Satkhira District using GIS with the Analytical Hierarchy Process (AHP). Ten factors were used: elevation, slope, drainage density, distance from rivers, distance from roads, rainfall, land use/land cover, soil type, NDVI, and TWI.</p>
 <p><b>Key points:</b> Most of the district is at moderate (57.1%) or high (35.1%) risk, with 0.5% extreme, 7.3% low, and less than 0.1% very low. In total, 92.7% falls in the moderate-to-extreme range. Validation against the 2015 flood gives AUC 0.806, better than the literature-based weighting (AUC 0.782). The model finds almost all flooded areas (recall 99.47%) but is deliberately cautious, with lower precision (32.40%) and accuracy (36.98%), which suits precautionary planning. Results point to needs for embankment management, controlled land use, and flood-resilient infrastructure.</p>
 <p><i>Revision submitted to <b>Discover Geoscience</b></i></p>
-<p>
-<img src="Satkhira flood_risk_methodology_bw.png" alt="methodology" width="250" loading="lazy" decoding="async">
-<br>
-<img src="Satkhira 2.png" alt="flood map" width="350" loading="lazy" decoding="async">
-<br>
-<img src="validation_figure_2015_outline_Satkhira.jpg" alt="validation" width="350" loading="lazy" decoding="async">
+<p class="figure-hint">Click thumbnails to view full size:</p>
+<p class="figure-row">
+<a href="Satkhira flood_risk_methodology_bw.png" target="_blank"><img class="thumb" src="Satkhira flood_risk_methodology_bw.png" alt="methodology" loading="lazy" decoding="async"></a>
+<a href="Satkhira 2.png" target="_blank"><img class="thumb" src="Satkhira 2.png" alt="flood map" loading="lazy" decoding="async"></a>
+<a href="validation_figure_2015_outline_Satkhira.jpg" target="_blank"><img class="thumb" src="validation_figure_2015_outline_Satkhira.jpg" alt="validation" loading="lazy" decoding="async"></a>
 </p>
 
 <br>
@@ -91,11 +95,10 @@
 <p>Collaborated with <a href="https://www.linkedin.com/in/maesha-mashiyat-679008435/">Maesha Mashiyat</a> to map over-irrigation zones across Northwest Bangladesh using unsupervised clustering techniques and GIS-based spatial analysis. The study identifies areas of excessive groundwater extraction for irrigation, offering a spatially explicit picture of water stress that can inform sustainable agricultural water management in the region.</p>
 
 <h2 id="skills">Technical Skills</h2>
-<p>I am familiar with <b>spatial data analysis</b> using both <b>GIS software</b> and <b>GeoPandas</b>, and I am particularly interested in applying <b>state-of-the-art methods</b> alongside my <b>domain knowledge</b>. I also have experience with <b>hydraulic and hydrologic modeling</b> using tools such as <b>HEC-RAS</b>, <b>HEC-HMS</b>, and <b>EPA-SWMM</b>.</p>
+<p>I am familiar with spatial data analysis using both GIS software and GeoPandas, and I am particularly interested in applying state-of-the-art methods alongside my domain knowledge. I also have experience with hydraulic and hydrologic modeling using tools such as HEC-RAS, HEC-HMS, and EPA-SWMM.</p>
 
 <h2 id="awards">Awards & Honors</h2>
-<p><b>University Merit Scholarship</b><br>Bangladesh University of Engineering and Technology<br>Awarded to the top three students in the Department of Water Resources Engineering each semester. Successfully received this prestigious recognition twice in consecutive semesters (Level 1 Term 2 and Level 2 Term 1), demonstrating consistent academic excellence.</p>
-<p><b>Dean's List Recognition</b><br>BUET Faculty of Civil Engineering<br>Honored for achieving a GPA of 3.75 or higher in two consecutive regular academic terms, recognizing sustained high-level academic performance.</p>
+<p><a href="awards.html">View Awards & Honors</a></p>
 
 <h2 id="leadership">Leadership & Activities</h2>
 <p><b>Assistant General Secretary</b><br>Notre Dame English Language Club<br>Served as <i>Assistant General Secretary</i> of the Notre Dame English Language Club, Department of ICT and Graphics, helping organize and coordinate events.</p>
