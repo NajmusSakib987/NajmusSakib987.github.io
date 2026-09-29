@@ -218,6 +218,63 @@
             display: block;
         }
 
+        .project-title {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .project-title:hover {
+            color: #0000EE;
+        }
+
+        .title-hint {
+            font-size: 0.8rem;
+            font-weight: normal;
+            font-style: italic;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal-box {
+            background: #fff;
+            border: 1px solid #000;
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            max-height: 80vh;
+            overflow: auto;
+        }
+
+        .modal-close {
+            float: right;
+            background: #fff;
+            border: 1px solid #000;
+            padding: 2px 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
         footer {
             background: #fff;
             color: #333;
@@ -290,12 +347,12 @@
 
         <section id="research">
             <h2>Research & Publications</h2>
+            <p>Click a title for details.</p>
 
             <div class="project">
                 <div class="project-status">[Manuscript in Preparation]</div>
-                <h3>Seasonal ENSO Signals, Annual Flood Peaks, and Changing Stage–Discharge Relations in the Ganges and Brahmaputra Rivers of Bangladesh</h3>
+                <h3 class="project-title" data-modal="modal-enso">Seasonal ENSO Signals, Annual Flood Peaks, and Changing Stage–Discharge Relations in the Ganges and Brahmaputra Rivers of Bangladesh <span class="title-hint">(click for details)</span></h3>
                 <p>Mohammad Najmus Sakib, <a href="https://scholar.google.com/citations?user=_r-UN8YAAAAJ&hl=en">Rounak Afroz</a></p>
-                <p><strong>Key points:</strong> Studies the Ganges at Hardinge Bridge and the Brahmaputra at Bahadurabad. The known seasonal link between ENSO and Ganges flow still holds when extended to 2022. However, the same ENSO signal does not predict the largest flood of the year. Gauges themselves changed over time: Hardinge Bridge shifts around 2006 with falling water level at same flow, Bahadurabad rises then falls around 2012, while rainfall shows no such change. A strong seasonal link does not mean a strong yearly-peak link.</p>
                 <div class="project-images">
                     <a href="Graphical Abstract ENSO.png" target="_blank"><img src="Graphical Abstract ENSO.png" alt="Graphical Abstract - ENSO, Flood Peaks and Stage-Discharge Relations" style="max-width:300px;"></a>
                 </div>
@@ -304,17 +361,13 @@
 
             <div class="project">
                 <div class="project-status">[Undergrad Thesis - Ongoing]</div>
-                <h3>Multi-Century Monthly Streamflow Reconstruction and Drought-Flood Abrupt Alternation Event Analysis of the Brahmaputra River</h3>
+                <h3 class="project-title" data-modal="modal-thesis">Multi-Century Monthly Streamflow Reconstruction and Drought-Flood Abrupt Alternation Event Analysis of the Brahmaputra River <span class="title-hint">(click for details)</span></h3>
                 <p>Under supervision of <a href="https://scholar.google.com/citations?user=_r-UN8YAAAAJ&hl=en">Dr. Rounak Afroz</a></p>
-                <p>The Brahmaputra is one of the largest rivers in South Asia, and its floods regularly affect millions of people in the delta region of Bangladesh. The instrumental record at Bahadurabad is too short to capture long-term change in the river. This project reconstructs centuries of monthly discharge at Bahadurabad using tree rings. Tree-ring width reflects the moisture a tree received each year, among other factors. Using this, tree-ring width is matched against the known flow of the river. This builds a weighted statistical model. The model then estimates past discharge, extending the record beyond what is currently available. This reconstruction will then be used to analyze historical droughts, wet periods, and abrupt drought-flood transitions. The result gives planners and researchers a longer baseline for assessing hydrological extremes and flood risk in downstream Bangladesh.</p>
             </div>
 
             <div class="project">
                 <div class="project-status">[Revision Submitted]</div>
-                <h3>FLOOD SUSCEPTIBILITY ASSESSMENT IN THE SATKHIRA DISTRICT OF BANGLADESH THROUGH MULTI-CRITERION ANALYSIS WITH AHP AND REMOTE SENSING</h3>
-                <p>This study maps flood risk in Satkhira District using GIS with the Analytical Hierarchy Process (AHP). Ten factors were used: elevation, slope, drainage density, distance from rivers, distance from roads, rainfall, land use/land cover, soil type, NDVI, and TWI.</p>
-                <p><strong>Key points:</strong> Most of the district is at moderate (57.1%) or high (35.1%) risk, with 0.5% extreme, 7.3% low, and less than 0.1% very low. In total, 92.7% falls in the moderate-to-extreme range. Validation against the 2015 flood gives AUC 0.806, better than the literature-based weighting (AUC 0.782). The model finds almost all flooded areas (recall 99.47%) but is deliberately cautious, with lower precision (32.40%) and accuracy (36.98%), which suits precautionary planning. Results point to needs for embankment management, controlled land use, and flood-resilient infrastructure.</p>
-                <p><em>Revision submitted to <strong>Discover Geoscience</strong></em></p>
+                <h3 class="project-title" data-modal="modal-satkhira">FLOOD SUSCEPTIBILITY ASSESSMENT IN THE SATKHIRA DISTRICT OF BANGLADESH THROUGH MULTI-CRITERION ANALYSIS WITH AHP AND REMOTE SENSING <span class="title-hint">(click for details)</span></h3>
                 <div class="project-images" style="display:flex; gap:10px; align-items:flex-start;">
                     <a href="Satkhira flood_risk_methodology_bw.png" target="_blank"><img src="Satkhira flood_risk_methodology_bw.png" alt="Satkhira flood risk methodology" style="max-width:200px;"></a>
                     <a href="Satkhira 2.png" target="_blank"><img src="Satkhira 2.png" alt="Satkhira flood map" style="max-width:250px;"></a>
@@ -324,10 +377,43 @@
 
             <div class="project">
                 <div class="project-status">[Poster Competition]</div>
+                <h3 class="project-title" data-modal="modal-poster">Spatial Assessment of Irrigation-Induced Water Stress in Northwest Bangladesh <span class="title-hint">(click for details)</span></h3>
+            </div>
+        </section>
+
+        <div class="modal-overlay" id="modal-enso">
+            <div class="modal-box">
+                <button class="modal-close" data-close>Close</button>
+                <h3>Seasonal ENSO Signals, Annual Flood Peaks, and Changing Stage–Discharge Relations in the Ganges and Brahmaputra Rivers of Bangladesh</h3>
+                <p><strong>Key points:</strong> Studies the Ganges at Hardinge Bridge and the Brahmaputra at Bahadurabad. The known seasonal link between ENSO and Ganges flow still holds when extended to 2022. However, the same ENSO signal does not predict the largest flood of the year. Gauges themselves changed over time: Hardinge Bridge shifts around 2006 with falling water level at same flow, Bahadurabad rises then falls around 2012, while rainfall shows no such change. A strong seasonal link does not mean a strong yearly-peak link.</p>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-thesis">
+            <div class="modal-box">
+                <button class="modal-close" data-close>Close</button>
+                <h3>Multi-Century Monthly Streamflow Reconstruction and Drought-Flood Abrupt Alternation Event Analysis of the Brahmaputra River</h3>
+                <p>The Brahmaputra is one of the largest rivers in South Asia, and its floods regularly affect millions of people in the delta region of Bangladesh. The instrumental record at Bahadurabad is too short to capture long-term change in the river. This project reconstructs centuries of monthly discharge at Bahadurabad using tree rings. Tree-ring width reflects the moisture a tree received each year, among other factors. Using this, tree-ring width is matched against the known flow of the river. This builds a weighted statistical model. The model then estimates past discharge, extending the record beyond what is currently available. This reconstruction will then be used to analyze historical droughts, wet periods, and abrupt drought-flood transitions. The result gives planners and researchers a longer baseline for assessing hydrological extremes and flood risk in downstream Bangladesh.</p>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-satkhira">
+            <div class="modal-box">
+                <button class="modal-close" data-close>Close</button>
+                <h3>FLOOD SUSCEPTIBILITY ASSESSMENT IN THE SATKHIRA DISTRICT OF BANGLADESH THROUGH MULTI-CRITERION ANALYSIS WITH AHP AND REMOTE SENSING</h3>
+                <p>This study maps flood risk in Satkhira District using GIS with the Analytical Hierarchy Process (AHP). Ten factors were used: elevation, slope, drainage density, distance from rivers, distance from roads, rainfall, land use/land cover, soil type, NDVI, and TWI.</p>
+                <p><strong>Key points:</strong> Most of the district is at moderate (57.1%) or high (35.1%) risk, with 0.5% extreme, 7.3% low, and less than 0.1% very low. In total, 92.7% falls in the moderate-to-extreme range. Validation against the 2015 flood gives AUC 0.806, better than the literature-based weighting (AUC 0.782). The model finds almost all flooded areas (recall 99.47%) but is deliberately cautious, with lower precision (32.40%) and accuracy (36.98%), which suits precautionary planning. Results point to needs for embankment management, controlled land use, and flood-resilient infrastructure.</p>
+                <p><em>Revision submitted to <strong>Discover Geoscience</strong></em></p>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-poster">
+            <div class="modal-box">
+                <button class="modal-close" data-close>Close</button>
                 <h3>Spatial Assessment of Irrigation-Induced Water Stress in Northwest Bangladesh</h3>
                 <p>Collaborated with Maesha Mashiyat to map over-irrigation zones across Northwest Bangladesh using unsupervised clustering techniques and GIS-based spatial analysis. The study identifies areas of excessive groundwater extraction for irrigation, offering a spatially explicit picture of water stress that can inform sustainable agricultural water management in the region.</p>
             </div>
-        </section>
+        </div>
 
         <section id="skills">
             <h2>Technical Skills</h2>
@@ -365,5 +451,31 @@
     <footer>
         <p>&copy; 2025 Mohammad Najmus Sakib</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.project-title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                var id = title.getAttribute('data-modal');
+                var modal = document.getElementById(id);
+                if (modal) modal.classList.add('open');
+            });
+        });
+
+        document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay || e.target.hasAttribute('data-close')) {
+                    overlay.classList.remove('open');
+                }
+            });
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.open').forEach(function(m) {
+                    m.classList.remove('open');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
