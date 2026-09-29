@@ -223,6 +223,14 @@
             text-decoration: underline;
         }
 
+        .thumb-link {
+            cursor: zoom-in;
+        }
+
+        .thumb-link img {
+            cursor: zoom-in;
+        }
+
         .project-title:hover {
             color: #0000EE;
         }
@@ -347,14 +355,14 @@
 
         <section id="research">
             <h2>Research & Publications</h2>
-            <p>Click a title for details.</p>
+            <p>Click a title for details. Click a thumbnail to enlarge.</p>
 
             <div class="project">
                 <div class="project-status">[Manuscript in Preparation]</div>
                 <h3 class="project-title" data-modal="modal-enso">Seasonal ENSO Signals, Annual Flood Peaks, and Changing Stage–Discharge Relations in the Ganges and Brahmaputra Rivers of Bangladesh <span class="title-hint">(click for details)</span></h3>
                 <p>Mohammad Najmus Sakib, <a href="https://scholar.google.com/citations?user=_r-UN8YAAAAJ&hl=en">Rounak Afroz</a></p>
                 <div class="project-images">
-                    <a href="Graphical Abstract ENSO.png" target="_blank"><img src="Graphical Abstract ENSO.png" alt="Graphical Abstract - ENSO, Flood Peaks and Stage-Discharge Relations" style="max-width:300px;"></a>
+                    <a href="Graphical Abstract ENSO.png" class="thumb-link"><img src="Graphical Abstract ENSO.png" alt="Graphical Abstract - ENSO, Flood Peaks and Stage-Discharge Relations" style="max-width:300px;"></a>
                 </div>
                 <p>Study area: <a href="study_area_stations_catchments.kmz">Download KMZ (stations and catchments, opens in Google Earth)</a></p>
             </div>
@@ -369,9 +377,9 @@
                 <div class="project-status">[Revision Submitted]</div>
                 <h3 class="project-title" data-modal="modal-satkhira">FLOOD SUSCEPTIBILITY ASSESSMENT IN THE SATKHIRA DISTRICT OF BANGLADESH THROUGH MULTI-CRITERION ANALYSIS WITH AHP AND REMOTE SENSING <span class="title-hint">(click for details)</span></h3>
                 <div class="project-images" style="display:flex; gap:10px; align-items:flex-start;">
-                    <a href="Satkhira flood_risk_methodology_bw.png" target="_blank"><img src="Satkhira flood_risk_methodology_bw.png" alt="Satkhira flood risk methodology" style="max-width:200px;"></a>
-                    <a href="Satkhira 2.png" target="_blank"><img src="Satkhira 2.png" alt="Satkhira flood map" style="max-width:250px;"></a>
-                    <a href="validation_figure_2015_outline_Satkhira (1).png" target="_blank"><img src="validation_figure_2015_outline_Satkhira (1).png" alt="Satkhira 2015 validation" style="max-width:250px;"></a>
+                    <a href="Satkhira flood_risk_methodology_bw.png" class="thumb-link"><img src="Satkhira flood_risk_methodology_bw.png" alt="Satkhira flood risk methodology" style="max-width:200px;"></a>
+                    <a href="Satkhira 2.png" class="thumb-link"><img src="Satkhira 2.png" alt="Satkhira flood map" style="max-width:250px;"></a>
+                    <a href="validation_figure_2015_outline_Satkhira (1).png" class="thumb-link"><img src="validation_figure_2015_outline_Satkhira (1).png" alt="Satkhira 2015 validation" style="max-width:250px;"></a>
                 </div>
             </div>
 
@@ -412,6 +420,14 @@
                 <button class="modal-close" data-close>Close</button>
                 <h3>Spatial Assessment of Irrigation-Induced Water Stress in Northwest Bangladesh</h3>
                 <p>Collaborated with Maesha Mashiyat to map over-irrigation zones across Northwest Bangladesh using unsupervised clustering techniques and GIS-based spatial analysis. The study identifies areas of excessive groundwater extraction for irrigation, offering a spatially explicit picture of water stress that can inform sustainable agricultural water management in the region.</p>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-image-view">
+            <div class="modal-box" style="max-width:90%; text-align:center;">
+                <button class="modal-close" data-close>Close</button>
+                <div style="clear:both;"></div>
+                <img id="modal-image" src="" alt="Full view" style="max-width:100%; max-height:75vh; border:1px solid #000;">
             </div>
         </div>
 
@@ -458,6 +474,19 @@
                 var id = title.getAttribute('data-modal');
                 var modal = document.getElementById(id);
                 if (modal) modal.classList.add('open');
+            });
+        });
+
+        document.querySelectorAll('.thumb-link').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var src = link.getAttribute('href');
+                var img = document.getElementById('modal-image');
+                var viewer = document.getElementById('modal-image-view');
+                if (img && viewer) {
+                    img.src = src;
+                    viewer.classList.add('open');
+                }
             });
         });
 
