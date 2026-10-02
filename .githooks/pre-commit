@@ -1,0 +1,9 @@
+#!/bin/sh
+# Auto-update "Last updated: DD-MM-YYYY" on every commit
+DATE=$(date +%d-%m-%Y)
+for f in index.html awards.html; do
+  if [ -f "$f" ]; then
+    sed -i -E "s/Last updated: [0-9]{2}-[0-9]{2}-[0-9]{4}/Last updated: $DATE/" "$f"
+    git add "$f"
+  fi
+done
